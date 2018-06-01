@@ -1,0 +1,86 @@
+/* pages/me/me.wxss */
+.me_container {
+  background-color: #FFFAFA;
+}
+
+.me_header {
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  align-items: center;
+  background-image: url(https://dumpt.com/img/files/qyu2v6k21d763g98andx.png)
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin-left: 20rpx;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  align-self: center;
+  margin-left: 30rpx;
+  color: white;
+}
+
+.me_property{
+  margin-top: 15rpx;
+  background-color: white;
+  padding: 25rpx;
+  font-size: 32rpx;
+  color: #B3B3B3;
+}
+.me_property_top_1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.me_property_top_2 {
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.me_main_buyrecord {
+  background-color: white; 
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #B3B3B3;
+}
+
+.me_main_buyrecord_title {
+  padding-left: 25rpx;
+  font-size: 30rpx;
+  align-self: center;
+}
+
+.me_main_contact {
+  background-color: white; 
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 15rpx solid #FFFAFA;
+  color: #B3B3B3;
+}
+
+.me_main_recharge {
+  flex-direction: column;
+}
+
+.me_main_recharge_charge {
+  background-color: white; 
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #B3B3B3;
+  border-bottom: 6rpx solid #FFFAFA;
+}
+
+.me_main_recharge_record {
+  background-color: white; 
+  display: flex;
+  justify-content: space-between;
+  color: #B3B3B3;
+}

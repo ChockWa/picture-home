@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "image-list": "/components/imageList/image-list"
+  }
+}

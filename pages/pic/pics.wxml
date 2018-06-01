@@ -1,0 +1,11 @@
+<view class="pic-container">
+    <view class="pic-header">
+       <picker bindchange="bindPickerChange" range-key="name" range="{{countries}}">
+         <view class="picker">
+           <text>选择分类</text>
+           <text>{{countries[index].name}}</text>
+         </view>
+       </picker>
+    </view>
+    <image-list imageList="{{picList}}"></image-list>
+</view>

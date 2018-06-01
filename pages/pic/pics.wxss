@@ -1,0 +1,5 @@
+/* pages/pic/pics.wxss */
+.pic-container {
+  width: 100%;
+  top: 0px;
+}

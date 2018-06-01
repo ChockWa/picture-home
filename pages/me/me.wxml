@@ -1,0 +1,37 @@
+<view class='me_container'>
+  <view class='me_header'>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+  </view>
+
+  <view class='me_property'>
+     <view class='me_property_top_1'>
+       <text>0</text>
+       <text>0</text>
+     </view>
+     <view class='me_property_top_2'>
+       <text>XX</text>
+       <text>XX</text>
+     </view> 
+  </view>
+
+  <view class='me_main_recharge'>
+     <view class='me_main_recharge_charge'>
+       <text class='me_main_buyrecord_title'>recharge</text>
+       <image style='width:60rpx;height:70rpx;' src='../../images/right_direct.png'></image>
+     </view>
+     <view class='me_main_recharge_record'>
+       <text class='me_main_buyrecord_title'>recharge_record</text>
+       <image style='width:60rpx;height:70rpx;' src='../../images/right_direct.png'></image>
+     </view>
+  </view>
+  <view class='me_main_buyrecord'>
+     <text class='me_main_buyrecord_title'>购买记录</text>
+     <image style='width:60rpx;height:70rpx;' src='../../images/right_direct.png'></image>
+  </view>
+
+  <view class='me_main_contact'>
+     <text class='me_main_buyrecord_title'>联系客服</text>
+     <image style='width:60rpx;height:70rpx;' src='../../images/right_direct.png'></image>
+  </view>
+</view>

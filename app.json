@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/pic/pics",
+    "pages/me/me"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "PICHOME",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "backgroundColor": "#F7F7F7",
+    "selectedColor": "#87CEFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/index_selected.png",
+        "iconPath": "images/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/pic_selected.png",
+        "iconPath": "images/pic.png",
+        "pagePath": "pages/pic/pics",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "images/me_selected.png",
+        "iconPath": "images/me.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  }
+}

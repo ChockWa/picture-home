@@ -1,0 +1,6 @@
+<!--components/imageList/image-list.wxml-->
+<view class='image-container'>
+  <view class='image-item' wx:for="{{imageList}}" wx:key="unique">
+    <image class="image" src="{{item.url}}" mode='widthFix'></image>
+  </view>
+</view>

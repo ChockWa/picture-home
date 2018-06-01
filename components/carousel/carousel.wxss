@@ -1,0 +1,29 @@
+/* components/Carousel.wxss */
+.swiper {
+    height: 450rpx;  
+}
+
+.swiper-container{
+  position: relative;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper .wx-swiper-dot{  
+    display: inline-flex;  
+    justify-content:space-between;  
+    border-radius: 50%;  
+}  
+.swiper .wx-swiper-dot::before{  
+    content: '';  
+    flex-grow: 1;    
+    background: gray;  
+      border-radius: 50%;  
+}  
+.swiper .wx-swiper-dot-active::before{  
+    background:white;    
+    border-radius: 50%;    
+}  
