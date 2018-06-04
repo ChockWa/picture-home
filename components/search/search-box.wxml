@@ -1,0 +1,10 @@
+<!--components/search/search-box.wxml-->
+<view class='page_row' bindtap="suo">  
+  <view class="search">  
+    <view class="df search_arr">  
+      <icon class="searchcion" size='18' type='search'></icon>  
+      <input class="" placeholder-class="placeholder" placeholder="请输入关键字" value="{{searchValue}}"/>  
+    </view>  
+  </view>  
+  <view class='sousuo'>搜索</view>  
+</view>

@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "image-list": "/components/imageList/image-list"
+    "image-list": "/components/imageList/image-list",
+    "search-box": "/components/search/search-box"
   }
 }

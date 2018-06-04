@@ -4,14 +4,20 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  background-color: #FFFAFA;
+  background-color: white;
+  margin-bottom: 50rpx;
 }
 
 .image-item {
-  width: 50%; 
-  margin-bottom: 5rpx;
+  width: 46%;
+  margin-top: 30rpx;
+  text-align: center;
 }
 
 .image {
-  width: 98%;
+  width: 100%;
+}
+
+.image-title {
+  font-size: 28rpx;
 }

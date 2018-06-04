@@ -7,18 +7,20 @@ Page({
   data: {
     index: '',
     picList: [
-      { "id": 1, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 2, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 3, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 4, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 5, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 6, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 7, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 8, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 9, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 10, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 11, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" },
-      { "id": 12, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png" }
+      // { "id": 1, "url": "http://i67.tinypic.com/2h3zclv.jpg", "title": "那些你很冒险的梦" },
+      // { "id": 2, "url": "http://i67.tinypic.com/2h3zclv.jpg", "title": "那些你很冒险的梦" },
+      { "id": 1, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 2, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 3, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 4, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 5, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 6, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 7, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 8, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 9, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 10, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 11, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" },
+      { "id": 12, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "那些你很冒险的梦" }
     ],
     countries: [
       {

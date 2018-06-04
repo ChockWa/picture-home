@@ -1,11 +1,16 @@
 <view class="pic-container">
+    <view class='search-box'>
+      <search-box></search-box>
+    </view>
     <view class="pic-header">
        <picker bindchange="bindPickerChange" range-key="name" range="{{countries}}">
          <view class="picker">
-           <text>选择分类</text>
-           <text>{{countries[index].name}}</text>
+          <view class='choose-container'>
+            <view class='choose-button'><text>选择分类</text></view>
+            <view class='choose-content'><text>{{countries[index].name}}</text></view>
+          </view>         
          </view>
        </picker>
     </view>
-    <image-list imageList="{{picList}}"></image-list>
+    <image-list originList="{{picList}}" titleName="title" urlName="url" imageId="id"></image-list>
 </view>

@@ -1,6 +1,7 @@
 <!--components/imageList/image-list.wxml-->
 <view class='image-container'>
   <view class='image-item' wx:for="{{imageList}}" wx:key="unique">
-    <image class="image" src="{{item.url}}" mode='widthFix'></image>
+    <image class="image" src="{{item.urlName}}" data-src="{{item.urlName}}" mode='widthFix' bindtap='previewPic'></image>
+    <text class='image-title'>{{item.titleName}}</text>
   </view>
 </view>
