@@ -23,7 +23,7 @@
   line-height: 180%;  
   text-align: center;  
   border-radius: 10rpx;
-  background-color: #AEEEEE;
+  background-color: #8EE5EE;
   color: white;
   font-size: 32rpx;
 }  
