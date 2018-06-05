@@ -10,10 +10,11 @@
     </view>
   </view>
   <view class='login-tip' hidden="{{isLogin}}">
-    <text class='tip'>AAAAAAAAAAAA</text>
+    <text class='tip'>后面还有{{}}张更精彩，请先登录</text>
+    <text class='login-button'>登陆</text>
   </view>
-  <view hidden="!{{isLogin}} && {{isVip}}">
-    <text>BBBBBBBBBBBB</text>
-    <button type='primary' size='mini'>CCCCCCCC</button>
+  <view class='login-tip' hidden="!{{isLogin}} && {{isVip}}">
+    <text class='tip'>您还不是VIP，VIP可查看全部</text>
+    <text class='login-button'>升级VIP</text>
   </view>
 </view>
