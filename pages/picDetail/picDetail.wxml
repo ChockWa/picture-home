@@ -1,0 +1,19 @@
+<!--pages/picDetail/picDetail.wxml-->
+<view class='detail-container'>
+  <view class='detail-header'>
+    <text class='detail-title'>XXXXXXXXXXXXXXXX</text>
+    <text class='detail-subtitle'>YYYYYYYYYYYYYYYYYYYYYYYYYYYYYY</text>
+  </view>
+  <view class='detail-images'>
+    <view class='detail-image-item' wx:for="{{picList}}" wx:key="unique">
+      <image class="image" src="{{item.url}}" data-src='{{item.url}}' mode='widthFix' bindtap='previewPic'></image>
+    </view>
+  </view>
+  <view class='login-tip' hidden="{{isLogin}}">
+    <text class='tip'>AAAAAAAAAAAA</text>
+  </view>
+  <view hidden="!{{isLogin}} && {{isVip}}">
+    <text>BBBBBBBBBBBB</text>
+    <button type='primary' size='mini'>CCCCCCCC</button>
+  </view>
+</view>

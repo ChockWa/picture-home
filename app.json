@@ -1,15 +1,16 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/pic/pics",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/picDetail/picDetail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "PICHOME",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#a9b7b7",
@@ -26,7 +27,7 @@
       {
         "selectedIconPath": "images/pic_selected.png",
         "iconPath": "images/pic.png",
-        "pagePath": "pages/pic/pics",
+        "pagePath": "pages/picDetail/picDetail",
         "text": "分类"
       },
       {

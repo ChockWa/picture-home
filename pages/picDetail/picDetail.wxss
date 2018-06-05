@@ -1,0 +1,54 @@
+/* pages/picDetail/picDetail.wxss */
+page {
+  background-color: #F8F8FF;
+}
+.detail-container {
+  width: 100%;
+}
+
+.detail-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.detail-title {
+  text-align: center;
+  font-size: 48rpx;
+}
+
+.detail-subtitle {
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.detail-images {
+  width: 100%;
+  background-color: white;
+  margin-top: 10rpx;
+}
+
+.detail-image-item {
+  width: 98%;
+  margin-bottom: 15rpx;
+  border-bottom: 5rpx solid #F8F8FF;
+}
+
+.image {
+  width: 100%;
+}
+
+.login-tip {
+  width: 100%;
+  height: 80rpx;
+  background-color: white;
+}
+
+.tip {
+  padding-left: 20rpx;
+  font-size: 36rpx;
+  color: red;
+  line-height: 80rpx;
+}
+

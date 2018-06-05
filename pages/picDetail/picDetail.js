@@ -1,12 +1,13 @@
-// pages/pic/pics.js
-const pageUtil = require('../../utils/pageUtil.js')
+// pages/picDetail/picDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    index: '',
+    // 是否是vip
+    isVip: false,
+    isLogin: false,
     picList: [
       // { "id": 1, "url": "http://i67.tinypic.com/2h3zclv.jpg", "title": "XXXXXXXXXX" },
       // { "id": 2, "url": "http://i67.tinypic.com/2h3zclv.jpg", "title": "XXXXXXXXXX" },
@@ -19,27 +20,7 @@ Page({
       { "id": 7, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
       { "id": 8, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
       { "id": 9, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 10, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 11, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 12, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" }
-    ],
-    countries: [
-      {
-        id: 1,
-        name: '美国'
-      },
-      {
-        id: 2,
-        name: '中国'
-      },
-      {
-        id: 3,
-        name: '巴西'
-      },
-      {
-        id: 4,
-        name: '日本'
-      }
+      { "id": 10, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" }
     ]
   },
 
@@ -99,28 +80,7 @@ Page({
   
   },
 
-  previewPic: function (e) {
-    var currentImg = e.currentTarget.dataset.img
-    let imgs = []
-    for (var i in this.data.picList) {
-      imgs.push(this.data.picList[i].url)
-    }
-    wx.previewImage({
-      current: e.currentTarget.dataset.img,
-      urls: imgs
-    })
-  },
-  bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
-  getImageDetail(e) {
-    const imageId = e.detail.imageId
-    const params = {
-      "imageId": imageId
-    }
-    pageUtil.toPage('../picDetail/picDetail', params)
+  getImageDetail(options) {
+    console.log(options)
   }
 })

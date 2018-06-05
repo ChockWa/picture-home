@@ -77,6 +77,10 @@ Component({
       this.setData({
         imageList: imageList
       })
+    },
+    getImageDetail(item) {
+      const imageId = item.currentTarget.dataset.imageid
+      this.triggerEvent('getDetail', {imageId: imageId})
     }
   }
 })
