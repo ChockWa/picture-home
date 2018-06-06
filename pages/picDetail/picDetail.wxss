@@ -16,6 +16,7 @@ page {
 .detail-title {
   text-align: center;
   font-size: 48rpx;
+  border-bottom: 15rpx solid white;
 }
 
 .detail-subtitle {

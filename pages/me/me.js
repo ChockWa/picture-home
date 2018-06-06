@@ -1,6 +1,8 @@
 // pages/me/me.js
 //获取应用实例
 const app = getApp()
+const userAuth = require('../../utils/userAuth.js')
+const toastUtil = require('../../utils/toastUtil.js')
 
 Page({
 
@@ -8,10 +10,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUse: false,
-    isLogin: true,
-    userInfo: {}
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    isLogin: false, // 是否已经登录
+    userInfo: {}  // 用户信息
   },
 
   /**
@@ -23,8 +24,18 @@ Page({
     wx.getSetting({
       success: function (res) {
         if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          // 已经授权，进行登录
+          userAuth.getLoginCode().then((code) => {
+            console.log(code)
+          }).catch((e) => {
+            toastUtil.errorMsg(e)
+          })
+          // 调用 getUserInfo 获取头像昵称
           _this.getUserInfo()
+          _this.setData({
+            isLogin: true,
+            canIUse: false,
+          })
         }
       }
     })    
@@ -99,6 +110,21 @@ Page({
     }
   },
   bindGetUserInfo: function (e) {
-    console.log(e.detail.userInfo)
+    // 如果允许授权，才有用户信息
+    if (e.detail.userInfo) {
+      // 进行登录
+      userAuth.getLoginCode().then((code) => {
+        console.log(code)
+      }).catch((e) => {
+        toastUtil.errorMsg(e)
+      })
+      // 把用户信息放入全局变量
+      app.globalData.userInfo = e.detail.userInfo
+      this.setData({
+        isLogin: true,
+        canIUse: false,
+        userInfo: e.detail.userInfo
+      })
+    }
   }
 })

@@ -1,7 +1,12 @@
 <view class='me_container'>
   <view class='me_header'>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-      <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+      <view class='user-info' wx:if="{{isLogin}}">
+         <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+         <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+      </view>
+      <view class='login-botton-area' wx:if="!{{isLogin}}">
+         <button class='login-button' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">请登录</button>
+      </view>
   </view>
 
   <view class='me_property'>
@@ -34,5 +39,5 @@
      <text class='me_main_buyrecord_title'>联系客服</text>
      <image style='width:60rpx;height:70rpx;' src='../../images/right_direct.png'></image>
   </view>
-  <button class='login-button' type='primary' wx:if="{{canIUse}} && !{{isLogin}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    
 </view>

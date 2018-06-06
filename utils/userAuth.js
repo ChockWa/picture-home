@@ -17,11 +17,10 @@ function getLoginCode () {
         reject('登录获取凭证code失败')
       }
     })
-    return promise
   })
-  
+  return promise
 }
 
 module.exports = {
-  login: login
+  getLoginCode: getLoginCode
 }
