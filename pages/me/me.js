@@ -3,6 +3,7 @@
 const app = getApp()
 const userAuth = require('../../utils/userAuth.js')
 const toastUtil = require('../../utils/toastUtil.js')
+const userService = require('../../api/user.js')
 
 Page({
 
@@ -26,7 +27,13 @@ Page({
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，进行登录
           userAuth.getLoginCode().then((code) => {
-            console.log(code)
+            userService.loginWithCode({code:code}).then((response => {
+              console.log(response)
+              if (response.code !== 0) {
+                toastUtil.errorMsg(response.msg)
+                return
+              }
+            }))
           }).catch((e) => {
             toastUtil.errorMsg(e)
           })

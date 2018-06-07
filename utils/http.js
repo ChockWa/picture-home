@@ -1,13 +1,15 @@
 /**
  * post请求封装
  */
-const base_url = 'localhost:8081/'
+const base_url = 'http://localhost:8081/'
 function post (url, params) {
   let promise = new Promise(function (resolve, reject) {
     wx.request({
       url: base_url + url,
       data: params,
-      header: { 'content-type': 'application/json' },
+      // header: { 'content-type': 'application/json' },
+      // 要是post请求必须加以下的头，否则服务端获取不到参数
+      header: { "Content-Type": "application/x-www-form-urlencoded" },
       method: 'POST',
       dataType: 'json',
       responseType: 'text',
