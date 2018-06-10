@@ -12,5 +12,5 @@
          </view>
        </picker>
     </view>
-    <image-list bind:getDetail="getImageDetail" originList="{{picList}}" titleName="title" urlName="url" imageId="id"></image-list>
+    <image-list bind:getDetail="getImageDetail" originList="{{picList}}" titleName="title" urlName="imageUrls" imageId="id"></image-list>
 </view>

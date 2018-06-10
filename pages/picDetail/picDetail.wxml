@@ -1,16 +1,16 @@
 <!--pages/picDetail/picDetail.wxml-->
 <view class='detail-container'>
   <view class='detail-header'>
-    <text class='detail-title'>XXXXXXXXXXXXXXXX</text>
-    <text class='detail-subtitle'>YYYYYYYYYYYYYYYYYYYYYYYYYYYYYY</text>
+    <text class='detail-title'>{{title}}</text>
+    <text class='detail-subtitle'>{{subtitle}}</text>
   </view>
   <view class='detail-images'>
     <view class='detail-image-item' wx:for="{{picList}}" wx:key="unique">
-      <image class="image" src="{{item.url}}" data-src='{{item.url}}' mode='widthFix' bindtap='previewPic'></image>
+      <image class="image" src="{{item}}" data-src="{{item}}" data-index="{{index}}" mode='widthFix' bindtap='previewPic'></image>
     </view>
   </view>
   <view class='login-tip' hidden="{{isLogin}}">
-    <text class='tip'>后面还有{{}}张更精彩，请先登录</text>
+    <text class='tip'>后面还有{{total}}张更精彩，请先登录</text>
     <text class='login-button'>登陆</text>
   </view>
   <view class='login-tip' hidden="!{{isLogin}} && {{isVip}}">

@@ -1,5 +1,7 @@
 // pages/pic/pics.js
 const pageUtil = require('../../utils/pageUtil.js')
+const imageService = require('../../api/image.js')
+const toastUtil = require('../../utils/toastUtil.js')
 Page({
 
   /**
@@ -10,18 +12,18 @@ Page({
     picList: [
       // { "id": 1, "url": "http://i67.tinypic.com/2h3zclv.jpg", "title": "XXXXXXXXXX" },
       // { "id": 2, "url": "http://i67.tinypic.com/2h3zclv.jpg", "title": "XXXXXXXXXX" },
-      { "id": 1, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 2, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 3, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 4, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 5, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 6, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 7, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 8, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 9, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 10, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 11, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
-      { "id": 12, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" }
+      // { "id": 1, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 2, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 3, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 4, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 5, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 6, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 7, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 8, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 9, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 10, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 11, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" },
+      // { "id": 12, "url": "https://dumpt.com/img/files/l8rtlw3ro9pif9ioante.png", "title": "XXXXXXXXXX" }
     ],
     countries: [
       {
@@ -47,7 +49,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 获取资源列表
+    this.getImages()
   },
 
   /**
@@ -75,7 +78,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    
   },
 
   /**
@@ -116,10 +119,29 @@ Page({
       index: e.detail.value
     })
   },
+  /**
+   * 获取资源列表
+   */
+  getImages() {
+    imageService.getImages().then((response) => {
+      if (response.code === 0) {
+        this.setData({
+          picList: response.data.result
+        })
+      } else {
+        toastUtil.errorMsg(response.msg)
+      }
+    }).catch((e) => {
+      toastUtil.errorMsg(e)
+    })
+  },
+  /**
+   * 获取资源详情
+   */
   getImageDetail(e) {
     const imageId = e.detail.imageId
     const params = {
-      "imageId": imageId
+      "sourceId": imageId
     }
     pageUtil.toPage('../picDetail/picDetail', params)
   }

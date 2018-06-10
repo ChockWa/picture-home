@@ -32,7 +32,7 @@ Component({
       value: 10
     }
   },
-  attached: function () {
+  ready: function () {
     // 初始化列表数据
     this.initData()
   },

@@ -27,7 +27,7 @@
       {
         "selectedIconPath": "images/pic_selected.png",
         "iconPath": "images/pic.png",
-        "pagePath": "pages/picDetail/picDetail",
+        "pagePath": "pages/pic/pics",
         "text": "分类"
       },
       {

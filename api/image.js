@@ -1,9 +1,14 @@
 const httpService = require('../utils/http.js')
 
 function getImages (params) {
-  return httpService.post('getSourceTest', params)
+  return httpService.post('getSourcesWXPage', params)
+}
+
+function getImageDetail(params) {
+  return httpService.post('getSourceWXDetail', params)
 }
 
 module.exports = {
-  getImages: getImages
+  getImages: getImages,
+  getImageDetail: getImageDetail
 }

@@ -14,8 +14,9 @@ page {
 }
 
 .detail-title {
+  width: 96%;
   text-align: center;
-  font-size: 48rpx;
+  font-size: 40rpx;
   border-bottom: 15rpx solid white;
 }
 
@@ -31,7 +32,8 @@ page {
 }
 
 .detail-image-item {
-  width: 98%;
+  width: 96%;
+  margin: 0 auto;
   margin-bottom: 15rpx;
   border-bottom: 5rpx solid #F8F8FF;
 }
